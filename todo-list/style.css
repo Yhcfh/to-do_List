@@ -1,0 +1,276 @@
+/* =============================================
+   RESET AND BASE STYLES
+   ============================================= */
+
+/* Reset all default margins and paddings for consistent styling across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+  font-family: "Poppins", sans-serif; /* Set clean, modern font for entire app */
+}
+
+/* =============================================
+   MAIN BODY AND LAYOUT
+   ============================================= */
+
+/* Style the entire page body */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2); /* Beautiful purple-blue gradient background */
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: start; /* Align children to top */
+  padding-top: 80px; /* Add space from top of viewport */
+  color: #333; /* Default text color */
+}
+
+/* =============================================
+   TYPOGRAPHY AND HEADINGS
+   ============================================= */
+
+/* Main application title */
+h1 {
+  font-size: 2.5rem;
+  color: #fff; /* White text for contrast against gradient */
+  margin-bottom: 10px;
+  letter-spacing: 1px; /* Slightly spread letters for better readability */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+}
+
+/* Instructions/description text */
+p {
+  color: #e0e0e0; /* Light gray for less emphasis than title */
+  margin-bottom: 25px;
+  font-size: 1rem;
+  text-align: center; /* Center align the instruction text */
+  max-width: 500px; /* Prevent text from becoming too wide */
+  line-height: 1.5; /* Better readability with increased line spacing */
+}
+
+/* =============================================
+   INPUT AND BUTTON CONTROLS
+   ============================================= */
+
+/* Text input field for adding new todos */
+#todo-input {
+  width: 320px;
+  padding: 12px 16px;
+  margin: 20px 0;
+  border-radius: 10px; /* Rounded corners for modern look */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Semi-transparent white border */
+  outline: none; /* Remove default browser outline */
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Smooth transition for focus effects */
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Style when input field is focused (clicked or tabbed into) */
+#todo-input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3); /* Glow effect around input */
+  transform: scale(1.02); /* Slight scale-up for interactive feedback */
+  border-color: rgba(255, 255, 255, 0.4); /* Lighten border on focus */
+}
+
+/* Add todo button */
+#add-btn {
+  margin-left: 10px;
+  padding: 12px 24px;
+  background: #4e54c8; /* Primary blue color */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 10px; /* Rounded corners matching input */
+  cursor: pointer; /* Show hand cursor on hover */
+  font-weight: 500; /* Medium font weight */
+  transition: all 0.3s ease; /* Smooth hover transitions */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Button shadow for depth */
+  font-size: 1rem;
+}
+
+/* Button hover state - when user moves mouse over button */
+#add-btn:hover {
+  background: #8f94fb; /* Lighter blue on hover */
+  transform: translateY(-2px); /* Lift button slightly */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Button active state - when button is being clicked */
+#add-btn:active {
+  transform: translateY(0); /* Return to normal position when clicked */
+}
+
+/* =============================================
+   TODO LIST CONTAINER
+   ============================================= */
+
+/* Main container for the list of todos */
+#todo-list {
+  list-style: none; /* Remove default bullet points */
+  margin-top: 30px;
+  padding: 0;
+  width: 380px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  border-radius: 16px; /* Large rounded corners for modern look */
+  backdrop-filter: blur(12px); /* Glass morphism effect - blur behind element */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Strong shadow for floating effect */
+  overflow: hidden; /* Prevent content from breaking rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+/* =============================================
+   INDIVIDUAL TODO ITEMS
+   ============================================= */
+
+/* Each individual todo item in the list */
+#todo-list li {
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Space out checkbox, text, and button */
+  padding: 14px 18px;
+  color: #fff; /* White text for contrast */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator between items */
+  transition: all 0.3s ease; /* Smooth background transition */
+}
+
+/* Hover effect for todo items */
+#todo-list li:hover {
+  background: rgba(255, 255, 255, 0.15); /* Lighten background on hover */
+}
+
+/* Remove border from last item to avoid double border at bottom */
+#todo-list li:last-child {
+  border-bottom: none;
+}
+
+/* =============================================
+   TODO ITEM COMPONENTS
+   ============================================= */
+
+/* Checkbox styling */
+#todo-list input[type="checkbox"] {
+  accent-color: #50fa7b; /* Custom green color for checkbox */
+  transform: scale(1.3); /* Slightly larger than default */
+  margin-right: 12px; /* Space between checkbox and text */
+  cursor: pointer; /* Show hand cursor */
+}
+
+/* Todo text styling */
+#todo-list span {
+  flex: 1; /* Take up all available space between checkbox and button */
+  cursor: pointer; /* Show hand cursor to indicate it's clickable */
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Smooth color transition */
+  padding: 4px 0; /* Vertical padding for better click area */
+}
+
+/* Text hover effect */
+#todo-list span:hover {
+  color: #a3ffea; /* Light teal color on hover */
+}
+
+/* Delete button styling */
+#todo-list button {
+  background: #ff4b5c; /* Red color for delete action */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Delete button hover effect */
+#todo-list button:hover {
+  background: #ff6b81; /* Lighter red on hover */
+  transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+/* =============================================
+   COMPLETED TODO STYLING
+   ============================================= */
+
+/* Style for completed todos (when checkbox is checked) */
+#todo-list li input[type="checkbox"]:checked + span {
+  text-decoration: line-through; /* Strike-through text */
+  color: #d0d0d0; /* Gray out text to indicate completion */
+  transition: all 0.3s ease; /* Smooth transition when marking complete */
+}
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+
+/* Smooth fade-in animation for new todos */
+#todo-list li {
+  animation: fadeIn 0.4s ease forwards; /* Apply fadeIn animation */
+}
+
+/* Define the fadeIn animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateY(8px); /* Start slightly lower */
+  }
+  to {
+    opacity: 1; /* End fully visible */
+    transform: translateY(0); /* End in normal position */
+  }
+}
+
+/* =============================================
+   RESPONSIVE DESIGN - MOBILE STYLES
+   ============================================= */
+
+/* Styles for screens smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+  body {
+    padding: 50px 20px 20px 20px; /* Adjust padding for mobile */
+  }
+  
+  h1 {
+    font-size: 2rem; /* Smaller heading on mobile */
+    text-align: center; /* Center align heading */
+  }
+  
+  #todo-input {
+    width: 100%; /* Full width on mobile */
+    max-width: 250px; /* But not too wide */
+  }
+  
+  #todo-list {
+    width: 100%; /* Full width list on mobile */
+    max-width: 320px; /* But limit maximum width */
+  }
+  
+  /* Stack input and button vertically on mobile */
+  #add-btn {
+    margin-left: 0; /* Remove left margin */
+    margin-top: 10px; /* Add top margin instead */
+    width: 100%; /* Full width button */
+    max-width: 250px; /* But limit maximum width */
+  }
+}
+
+/* =============================================
+   UTILITY CLASSES FOR BETTER ORGANIZATION
+   ============================================= */
+
+/* Class for grouping input and button together */
+.input-group {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center;
+  gap: 10px; /* Space between children */
+}
+
+/* Main container class for better organization */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
