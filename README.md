@@ -1,159 +1,179 @@
-Todo List Application
-A simple, elegant, and fully functional Todo List web application built with vanilla JavaScript, HTML, and CSS. This project features local storage persistence, smooth animations, and a beautiful glass morphism design.
+# 📝 Todo List Application
 
-https://img.shields.io/badge/Status-Live-brightgreen https://img.shields.io/badge/JavaScript-ES6+-yellow https://img.shields.io/badge/CSS3-Styled-blue https://img.shields.io/badge/HTML5-Structured-orange
+[![Status: Live](https://img.shields.io/badge/Status-Live-brightgreen)](https://github.com/Yhcfh/to-do_List)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow?logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![CSS3](https://img.shields.io/badge/CSS3-Styled-blue?logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![HTML5](https://img.shields.io/badge/HTML5-Structured-orange?logo=html5)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![MIT License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
 
-🎥 Tutorial Source
-This project was built following the tutorial:
-How to Build a Todo List App with HTML, CSS & JavaScript
-Credits to the original tutorial creator
+A simple, elegant, and fully functional Todo List web application built with **vanilla JavaScript, HTML, and CSS**. This project features local storage persistence, smooth animations, and a modern glassmorphism UI.
 
-✨ Features
-✅ Add new todos with Enter key or Add button
+---
 
-✅ Mark todos as complete with checkboxes
+## 📚 Table of Contents
 
-✅ Edit todos by double-clicking on the text
+- [Features](#features)
+- [Demo](#demo)
+- [Project Structure](#project-structure)
+- [How to Use](#how-to-use)
+- [Installation](#installation)
+- [Key Learning Points](#key-learning-points)
+- [Customization](#customization)
+- [Browser Compatibility](#browser-compatibility)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
 
-✅ Delete todos with dedicated delete buttons
+---
 
-💾 Automatic save to browser's local storage
+## ✨ Features
 
-🎨 Beautiful glass morphism UI design
+- ✅ Add new todos using the Enter key or Add button
+- ✅ Mark todos as complete with checkboxes (with strike-through effect)
+- ✅ Edit todos by double-clicking on their text
+- ✅ Delete todos with dedicated buttons
+- 💾 Automatically saved in browser's local storage
+- 🎨 Beautiful glassmorphism UI design
+- 📱 Fully responsive for mobile devices
+- ⚡ Smooth animations and transitions
 
-📱 Fully responsive for mobile devices
+---
 
-⚡ Smooth animations and transitions
+## 🚀 Demo
 
-🎯 Strike-through effects for completed items
+> **Live Preview:** [Add live link if deployed]
 
-🛠️ Technologies Used
-HTML5 - Semantic structure
+---
 
-CSS3 - Modern styling with gradients and animations
+## 📁 Project Structure
 
-JavaScript (ES6+) - Application logic and DOM manipulation
-
-Local Storage API - Data persistence
-
-CSS Grid & Flexbox - Layout and alignment
-
-📁 Project Structure
-text
-todo-list-app/
+```
+to-do_List/
 │
-├── index.html          # Main HTML file
-├── style.css           # Styles and animations
-├── script.js           # JavaScript functionality
-└── README.md           # Project documentation
-🎯 How to Use
-Add a Todo:
+├── index.html        # Main HTML file
+├── style.css         # CSS styles and animations
+├── script.js         # JavaScript application logic
+└── README.md         # Project documentation
+```
 
-Type your task in the input field
+---
 
-Press Enter or click the Add button
+## 🎯 How to Use
 
-Complete a Todo:
+### Add a Todo
 
-Click the checkbox to mark as complete
+1. Type your task in the input field.
+2. Press **Enter** or click the **Add** button.
 
-Completed items show with strike-through text
+### Complete a Todo
 
-Edit a Todo:
+- Click the checkbox to mark as complete (item will show strike-through text).
 
-Double-click on any todo text to edit it
+### Edit a Todo
 
-A prompt will appear for modifications
+- Double-click on any todo text to edit it (a prompt will appear).
 
-Delete a Todo:
+### Delete a Todo
 
-Click the Delete button next to any todo
+- Click the **Delete** button next to any todo (item will be permanently removed).
 
-The item will be permanently removed
+---
 
-🔧 Installation
+## 🔧 Installation
+
 To run this project locally:
 
-Clone the repository:
+1. **Clone the repository:**
 
-bash
-git clone https://github.com/your-username/todo-list-app.git
-Navigate to the project directory:
+    ```bash
+    git clone https://github.com/Yhcfh/to-do_List.git
+    ```
 
-bash
-cd todo-list-app
-Open in your browser:
+2. **Navigate to the project directory:**
 
-Simply open index.html in your preferred web browser
+    ```bash
+    cd to-do_List
+    ```
 
-Or use a local server for better performance:
+3. **Open in your browser:**
 
-bash
-# Using Python 3
-python -m http.server 8000
+    - Simply open `index.html` in your preferred web browser.
 
-# Using Node.js (if you have http-server installed)
-npx http-server
-💡 Key Learning Points
-This project demonstrates:
+    **Or use a local server for better performance:**
 
-DOM Manipulation: Creating, updating, and removing elements dynamically
+    ```bash
+    # Using Python 3
+    python -m http.server 8000
 
-Event Handling: Click, change, keydown, and double-click events
+    # Using Node.js (if you have http-server installed)
+    npx http-server
+    ```
 
-Local Storage: Persisting data in the browser
+---
 
-Array Methods: forEach, push, splice for data management
+## 💡 Key Learning Points
 
-CSS Animations: Keyframes and transitions for smooth UX
+- **DOM Manipulation**: Creating, updating, and removing elements dynamically
+- **Event Handling**: Click, change, keydown, double-click events
+- **Local Storage**: Persisting data in the browser
+- **Array Methods**: forEach, push, splice for data management
+- **CSS Animations**: Keyframes and transitions for smooth UX
+- **Responsive Design**: Mobile-first approach with media queries
+- **Modern CSS**: Glassmorphism, gradients, and backdrop filters
 
-Responsive Design: Mobile-first approach with media queries
+---
 
-Modern CSS: Glass morphism, gradients, and backdrop filters
+## 🎨 Customization
 
-🎨 Customization
-You can easily customize this todo list by:
+You can easily customize this Todo List app by:
 
-Changing colors: Modify the CSS gradient variables
+- Changing colors (edit CSS gradient variables)
+- Adding categories (extend the todo object structure)
+- Implementing due dates (add date input and display)
+- Adding filters (show all/active/completed todos)
+- Enhancing animations (add more CSS transitions)
 
-Adding categories: Extend the todo object structure
+---
 
-Implementing due dates: Add date input and display
+## 📱 Browser Compatibility
 
-Adding filters: Show all/active/completed todos
+- ✅ Chrome (recommended)
+- ✅ Firefox
+- ✅ Safari
+- ✅ Edge
 
-Enhancing animations: Add more CSS transitions
+> _Note: Glassmorphism and other advanced effects may display differently across browsers._
 
-📱 Browser Compatibility
-✅ Chrome (recommended)
+---
 
-✅ Firefox
+## 🤝 Contributing
 
-✅ Safari
+Contributions, issues, and feature requests are welcome! Check the [issues page](https://github.com/Yhcfh/to-do_List/issues) to get started.
 
-✅ Edge
+---
 
-Note: Some glass morphism effects may vary across browsers
+## 📄 License
 
-🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check issues page if you want to contribute.
+This project is open source and available under the [MIT License](./LICENSE).
 
-📄 License
-This project is open source and available under the MIT License.
+---
 
-🙏 Acknowledgments
-Thanks to YouTube Tutorial for the foundational code and concepts
+## 🙏 Acknowledgments
 
-Inspired by modern todo applications with clean UI/UX
+- Thanks to the YouTube tutorial creator for foundational code and concepts.
+- Inspired by modern todo applications with clean UI/UX principles.
+- [Icons and design principles](https://www.flaticon.com/) from modern web standards.
 
-Icons and design principles from modern web standards
+---
 
-📞 Contact
-Jai Mittal - jaimittal0808@gmail.com
+## 📞 Contact
 
-Project Link: https://github.com/Yhcfh/to-do_List-app
+- **Jai Mittal** — [jaimittal0808@gmail.com](mailto:jaimittal0808@gmail.com)
+- Project Link: [https://github.com/Yhcfh/to-do_List](https://github.com/Yhcfh/to-do_List)
 
-⭐ Star this repo if you found it helpful!
+---
 
-Built with 💻 and ❤️ using vanilla JavaScript
+⭐ If you found this project helpful, [star the repo](https://github.com/Yhcfh/to-do_List)!
 
+_Built with 💻 and ❤️ using vanilla JavaScript_
